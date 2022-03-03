@@ -1,3 +1,10 @@
-const add=require("./add");
-add();
-console.log(add());
+const adding=require("./add");
+const subtracting=require ("./subtract");
+const multi=require ("./multiply");
+const divide=require ("./divide");
+// adding();
+// multi();
+ console.log("a+b= ", adding());
+ console.log("a-b= ", subtracting());
+ console.log("a*b= ", multi());
+ console.log("a/b= ", divide());
