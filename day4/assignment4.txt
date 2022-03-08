@@ -1,0 +1,53 @@
+ASSIGNMENT MONGODB COMMANDS
+
+
+mongo
+
+show dbs
+
+use assignment
+
+db
+
+show collections
+
+db.createCollection("users")
+
+show collections
+
+db.users.insert({"first_name":"Aman", "last_name":"Kumar", "email":"amankumar@mail.com","gender":"Female","ip_address":"123.23.34", "age":23})
+
+
+db.users.insertMany([{"first_name":"Billu","last_name":"Singh","email":"billusingh@mail.com","gender":"Male","ip_address":"234.34.45","age":24},{"first_name":"Chitra","last_name":"Sharma","email":"chitrasharma@mail.com","gender":"Female","ip_address":"345.45.56","age":16}])
+
+
+db.users.insertMany([{"first_name":"Dullu","last_name":"Singh","email":"dullusingh@mail.com","gender":"Male","ip_address":"456.56.67","age":20},{"first_name":"Ela","last_name":"Sharma","email":"elasharma@mail.com","gender":"Female","ip_address":"456.56.67","age":18}])
+
+
+db.users.insertMany([{"first_name":"Farhan","last_name":"Singh","email":"farhansingh@mail.com","gender":"Male","ip_address":"987.12.45","age":32},{"first_name":"Geeta","last_name":"Sinha","email":"geetasinha@mail.com","gender":"Female","ip_address":"135.35.59","age":26}])
+
+
+db.users.insertMany([{"first_name":"Harsh","last_name":"Anand","email":"harshanand@mail.com","gender":"Male","ip_address":"987.12.54","age":55},{"first_name":"Iliana","last_name":"Sinha","email":"ilianasinha@mail.com","gender":"Female","ip_address":"135.35.95","age":44}])
+
+
+db.users.insert({"first_name":"John", "last_name":"Khan", "email":"johnkhan@mail.com","gender":"Male","ip_address":"321.23.34", "age":63})
+
+
+db.users.find({}).pretty()
+
+
+db.users.findOne({"gender":"male"})
+
+db.users.update({"first_name":"Aman"},{$set:{"age":66}})
+
+db.users.update({"first_name":"Geeta"},{$set:{"age":11}})
+
+db.users.updateMany({"gender":"Male"},{$set:{"age":"Delhi"}})
+
+db.users.remove({"first_name":"Iliana"})
+
+db.users.deleteOne({"gender":"Male"})
+
+db.users.deleteMany({"gender":"Female"})
+
+db.users.remove({})
