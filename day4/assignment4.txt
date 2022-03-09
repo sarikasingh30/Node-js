@@ -42,7 +42,7 @@ db.users.update({"first_name":"Aman"},{$set:{"age":66}})
 
 db.users.update({"first_name":"Geeta"},{$set:{"age":11}})
 
-db.users.updateMany({"gender":"Male"},{$set:{"age":"Delhi"}})
+db.users.updateMany({"gender":"Male"},{$set:{"city":"Delhi"}})
 
 db.users.remove({"first_name":"Iliana"})
 
