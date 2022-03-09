@@ -1,0 +1,27 @@
+db.users.find({}).pretty()
+
+db.users.count()
+
+db.users.find({"movie_name":{$eq:"Bug"}}).pretty()
+
+db.users.find({"movie_name":{$ne:"Edward"}}).pretty()
+
+db.users.find({"budget":{$gte:15000}}).pretty()
+
+db.users.find({"budget":{$lte:10000}}).pretty()
+
+db.users.find({$and:[{"production_year":{$gt:2000}},{"budget":{$gt:10000}}]}).pretty()
+
+db.users.find({$or:[{"production_year":{$gt:2000}},{"budget":{$gt:10000}}]}).pretty()
+
+db.users.find({$nor:[{"production_year":{$gt:2000}},{"budget":{$gt:10000}}]}).pretty()
+
+db.users.find({$or:[{"production_year":{$ne:2000}},{"budget":{$ne:10000}}]}).pretty()
+
+db.users.find({"production_year":{$in : [2000,2001,2002,2003,2004,2005, 2006,2007,2008,2009,2010]}}).pretty()
+
+db.users.find({}).sort({"production_year": -1, "movie_name":1}).pretty()
+
+db.users.find({}).sort({"production_year": -1, "movie_name":1}).skip(10).limit(5).pretty()
+
+db.users.find({},{"movie_genre":0}).sort({"production_year": -1, "movie_name":1}).limit(10).pretty()
