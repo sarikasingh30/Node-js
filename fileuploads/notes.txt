@@ -1,0 +1,2 @@
+console.error() // will print the error in red color in browser.
+console.warn() //will print the warning  yellow color in browser.
